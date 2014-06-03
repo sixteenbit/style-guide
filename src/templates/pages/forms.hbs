@@ -1,0 +1,86 @@
+---
+title: Forms
+heading: Form Elements
+lead: Easy, powerful and versatile form layout system
+---
+<div class="content">
+  <h2 class="content-subhead">Building Forms With HTML</h2>
+  <p>Creating a form in Foundation is designed to be easy but extremely flexible. Forms are built with a combination of standard form elements, as well as the Grid (rows and columns).</p>
+
+  <p>Form elements in Foundation are styled based on their type attribute rather than a class, and can be sized in a couple of ways:</p>
+
+  <ul>
+    <li>You can size inputs using column sizes, like <code>.large-6</code>, <code>.small-6</code>.</li>
+    <li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
+  </ul>
+
+  <p>This is an example form we've created that is laid out using the grid:</p>
+
+  {{#markdown}}
+  ```html
+  <form>
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Input Label
+          <input type="text" placeholder="large-12.columns" />
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-4 columns">
+        <label>Input Label
+          <input type="text" placeholder="large-4.columns" />
+        </label>
+      </div>
+      <div class="large-4 columns">
+        <label>Input Label
+          <input type="text" placeholder="large-4.columns" />
+        </label>
+      </div>
+      <div class="large-4 columns">
+        <div class="row collapse">
+          <label>Input Label</label>
+          <div class="small-9 columns">
+            <input type="text" placeholder="small-9.columns" />
+          </div>
+          <div class="small-3 columns">
+            <span class="postfix">.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Select Box
+          <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Choose Your Favorite</label>
+        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+      </div>
+      <div class="large-6 columns">
+        <label>Check these out</label>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Textarea Label
+          <textarea placeholder="small-12.columns"></textarea>
+        </label>
+      </div>
+    </div>
+  </form>
+  ```
+  {{/markdown}}
+</div>

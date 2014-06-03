@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forms | Style Guide</title>
+
+    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.5.0/base-min.css">
+    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.5.0/grids-min.css">
+    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.5.0/menus-min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/prettify.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="//cdn.foundation5.zurb.com/foundation.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="layout">
+
+    
+<!-- Menu toggle -->
+<a href="#menu" id="menuLink" class="menu-link">
+	<span></span>
+</a>
+<div id="menu">
+	<div class="pure-menu pure-menu-open">
+		<a class="pure-menu-heading" href="/">Style Guide</a>
+		<ul>
+			
+      <li>
+        <a href="branding.html">Branding</a>
+      </li>
+      
+      <li>
+        <a href="buttons.html">Buttons</a>
+      </li>
+      
+      <li class="pure-menu-selected">
+        <a href="forms.html">Forms</a>
+      </li>
+      
+      <li>
+        <a href="grid.html">Grid</a>
+      </li>
+      
+      <li>
+        <a href="icons.html">Icons</a>
+      </li>
+      
+      <li>
+        <a href="index.html">Base</a>
+      </li>
+      
+      <li>
+        <a href="tables.html">Tables</a>
+      </li>
+      
+		</ul>
+	</div>
+</div>
+
+    <div id="main" class="welcome" role="main">
+
+      
+<div class="header">
+	<h1>Form Elements</h1>
+	<h2>Easy, powerful and versatile form layout system</h2>
+</div>
+
+      
+<div class="content">
+  <h2 class="content-subhead">Building Forms With HTML</h2>
+  <p>Creating a form in Foundation is designed to be easy but extremely flexible. Forms are built with a combination of standard form elements, as well as the Grid (rows and columns).</p>
+
+  <p>Form elements in Foundation are styled based on their type attribute rather than a class, and can be sized in a couple of ways:</p>
+
+  <ul>
+    <li>You can size inputs using column sizes, like <code>.large-6</code>, <code>.small-6</code>.</li>
+    <li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
+  </ul>
+
+  <p>This is an example form we've created that is laid out using the grid:</p>
+
+  <pre><code class="language-html">  &lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;large-12 columns&quot;&gt;
+        &lt;label&gt;Input Label
+          &lt;input type=&quot;text&quot; placeholder=&quot;large-12.columns&quot; /&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;large-4 columns&quot;&gt;
+        &lt;label&gt;Input Label
+          &lt;input type=&quot;text&quot; placeholder=&quot;large-4.columns&quot; /&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;large-4 columns&quot;&gt;
+        &lt;label&gt;Input Label
+          &lt;input type=&quot;text&quot; placeholder=&quot;large-4.columns&quot; /&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;large-4 columns&quot;&gt;
+        &lt;div class=&quot;row collapse&quot;&gt;
+          &lt;label&gt;Input Label&lt;/label&gt;
+          &lt;div class=&quot;small-9 columns&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;small-9.columns&quot; /&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;small-3 columns&quot;&gt;
+            &lt;span class=&quot;postfix&quot;&gt;.com&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;large-12 columns&quot;&gt;
+        &lt;label&gt;Select Box
+          &lt;select&gt;
+            &lt;option value=&quot;husker&quot;&gt;Husker&lt;/option&gt;
+            &lt;option value=&quot;starbuck&quot;&gt;Starbuck&lt;/option&gt;
+            &lt;option value=&quot;hotdog&quot;&gt;Hot Dog&lt;/option&gt;
+            &lt;option value=&quot;apollo&quot;&gt;Apollo&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;large-6 columns&quot;&gt;
+        &lt;label&gt;Choose Your Favorite&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;pokemon&quot; value=&quot;Red&quot; id=&quot;pokemonRed&quot;&gt;&lt;label for=&quot;pokemonRed&quot;&gt;Red&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;pokemon&quot; value=&quot;Blue&quot; id=&quot;pokemonBlue&quot;&gt;&lt;label for=&quot;pokemonBlue&quot;&gt;Blue&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;large-6 columns&quot;&gt;
+        &lt;label&gt;Check these out&lt;/label&gt;
+        &lt;input id=&quot;checkbox1&quot; type=&quot;checkbox&quot;&gt;&lt;label for=&quot;checkbox1&quot;&gt;Checkbox 1&lt;/label&gt;
+        &lt;input id=&quot;checkbox2&quot; type=&quot;checkbox&quot;&gt;&lt;label for=&quot;checkbox2&quot;&gt;Checkbox 2&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;large-12 columns&quot;&gt;
+        &lt;label&gt;Textarea Label
+          &lt;textarea placeholder=&quot;small-12.columns&quot;&gt;&lt;/textarea&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;</code></pre>
+
+</div>
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/ui.min.js"></script>
+    <script src="assets/js/prettify.min.js"></script>
+
+    <script src="//cdn.foundation5.zurb.com/foundation.js"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

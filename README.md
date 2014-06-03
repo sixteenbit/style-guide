@@ -1,4 +1,3 @@
-style-guide
-===========
+# Style Guide
 
-Template for a style guide
+A template for building an online style guide.

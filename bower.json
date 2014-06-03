@@ -1,0 +1,8 @@
+{
+  "name": "style-guide",
+  "version": "0.0.1",
+  "dependencies": {
+    "google-code-prettify": "~1.0.1",
+    "bourbon": "~4.0.2"
+  }
+}
